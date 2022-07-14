@@ -1,0 +1,89 @@
+
+// ============ LOGO ANIMATION ============ //
+
+.logonu-letter-n{
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: logo-n 15s ease infinite alternate;
+}
+@keyframes logo-n{
+    0%{
+        opacity: 0;
+        stroke-dasharray: 0 100;
+        transform: translate3d(0,0,0) rotate(0deg);
+    }
+    10%, 40%{
+        opacity: 1;
+        stroke-dasharray: 100 0;
+        transform: translate3d(0,0,0) rotate(0deg);
+    }
+    50%, 70%{
+        opacity: 1;
+        stroke-dasharray: 100 0;
+        transform: translate3d(40px,9px,0) rotate(180deg);
+    }
+    80%, 95%{
+        opacity: 1;
+        stroke-dasharray: 100 0;
+        transform: translate3d(0,0,0) rotate(0deg);
+    }
+    100%{
+        opacity: 0;
+        stroke-dasharray: 0 100;
+        transform: translate3d(0,0,0) rotate(0deg);
+    }
+    
+}
+.logonu-letter-u{
+    transform-origin: center center;
+    transform-box: fill-box;
+    animation: logo-u 15s ease infinite alternate;
+}
+@keyframes logo-u{
+    0%{
+        opacity: 0;
+        stroke-dasharray: 0 100;
+        transform: translate3d(0,0,0) rotate(0deg);
+    }
+    10%, 40%{
+        opacity: 1;
+        stroke-dasharray: 100 0;
+        transform: translate3d(0,0,0) rotate(0deg);
+    }
+    50%, 70%{
+        opacity: 1;
+        stroke-dasharray: 100 0;
+        transform: translate3d(-40px,-9px,0) rotate(-180deg);
+    }
+    80%, 95%{
+        opacity: 1;
+        stroke-dasharray: 100 0;
+        transform: translate3d(0,0,0) rotate(0deg);
+    }
+    100%{
+        opacity: 0;
+        stroke-dasharray: 0 100;
+        transform: translate3d(0,0,0) rotate(0deg);
+    }
+    
+}
+
+// ============ CARD HERO ANIMATION ============ //
+$card-width: 340px;
+$card-height: 0.64 * $card-width;
+
+.div-card{
+    perspective: 500px;
+    position: relative;
+}
+.card{
+    width: $card-width;
+    height: $card-height;
+    border-radius: 12px;
+    background-color: red;
+    transform-origin: center center;
+    z-index: -1;
+    transform-style: preserve-3d;
+    
+}
+

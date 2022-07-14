@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="js/svg-inject-min.js"></script>
+    <title>Nubank Prática 2</title>
+</head>
+<body>
+    <!--========== HEADER ==========-->
+
+    <header id="header">
+        <!--========== NAV DESKTOP ==========-->
+        <nav class="nav-desktop">
+            <div class="nav-desktop-item-1">
+                <div class="logo">
+                    <a href="#">
+                        <img src="svg/logonu.svg" alt="" onload="SVGInject(this)">
+                    </a>
+                </div>
+                <!--========== MENU DESKTOP ==========-->
+                <ul class="menu-desktop">
+                    <li class="menu-item" id="menu-item-1">
+                        <a href="#" class="menu-desktop-link">Nubank</a>
+                        <ul class="dropdown-menu" id="dropdown-1">
+                            <li class="dropdown-item"> <a href="#" class="dropdown-link">O Nu</a> </li>
+                            <li class="dropdown-item"> <a href="#" class="dropdown-link">Carreiras</a> </li>
+                            <li class="dropdown-item"> <a href="#" class="dropdown-link">Imprensa</a> </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item" id="menu-item-2">
+                        <a href="#" class="menu-desktop-link">Conta Digital</a>
+                        <ul class="dropdown-menu" id="dropdown-2">
+                            <li class="dropdown-item"> <a href="#" class="dropdown-link">Cire sua conta</a> </li>
+                            <li class="dropdown-item"> <a href="#" class="dropdown-link">Transferências</a> </li>
+                            <li class="dropdown-item"> <a href="#" class="dropdown-link">Rendimento</a> </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item" id="menu-item-3">
+                        <a href="#" class="menu-desktop-link">Pra Você</a>
+                        <ul class="dropdown-menu" id="dropdown-3">
+                            <li class="dropdown-item"> <a href="#" class="dropdown-link">Comunidade</a> </li>
+                            <li class="dropdown-item"> <a href="#" class="dropdown-link">Rewards</a> </li>
+                            <li class="dropdown-item"> <a href="#" class="dropdown-link">Novidades</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-desktop-item-2 flex-end">
+                <a href="#" class="btn mr-2">Quero ser Nubank</a>
+                <a href="#">Login</a>
+            </div>
+        </nav>
+
+        <!--========== NAV MOBILE ==========-->
+
+        <nav class="nav-mobile" id="nav-mobile">
+            <div class="bx" id="bx"></div>
+
+            <div class="logo">
+                <a href="#">
+                    <img src="svg/logonu.svg" alt="" onload="SVGInject(this)">
+                </a>
+            </div>
+
+            <div>
+                <a href="#">Login</a>
+            </div>
+        </nav>
+
+        <!--========== MENU MOBILE ==========-->
+        <nav class="menu-mobile" id="menu-mobile">
+            <ul class="list-menu-mobile">
+                <li> <a href="#" class="menu-mobile-link">Nubank</a> </li>
+                <li> <a href="#" class="menu-mobile-link">Conta Digital</a> </li>
+                <li> <a href="#" class="menu-mobile-link">Pra Você</a> </li>
+                <li> <a href="#" class="menu-mobile-link">Quero ser Nubank</a> </li>
+                <li class="flex-center mt-5">
+                    <a href="#">
+                        <img src="svg/icon-facebook.svg" alt="" class="mx-1" onload="SVGInject(this)">
+                    </a>
+                    <a href="#">
+                        <img src="svg/icon-youtube.svg" alt="" class="mx-1" onload="SVGInject(this)">
+                    </a>
+                    <a href="#">
+                        <img src="svg/icon-instagram.svg" alt="" class="mx-1" onload="SVGInject(this)">
+                    </a>
+                    <a href="#">
+                        <img src="svg/icon-twitter.svg" alt="" class="mx-1" onload="SVGInject(this)">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--========== HERO ==========--> 
+
+    <div class="bg-home">
+        <img src="svg/bg-home.svg" class="svg-bg-home" alt="" onload="SVGInject(this)">
+    </div>
+
+    <main class="container hero py-11">
+        <div class="flex-item-1 py-7">
+            <h1>Ser Nubank é reinventar sua vida financeira.</h1>
+            <p class="my-2">Conta com rendimento acima da poupança, cartão de crédito sem anuidade e o melhor: resolva tudo pelo app.</p>
+
+            <div class="flex-start">
+            <a href="#" class="btn">Quero ser Nubank</a>
+
+            <a href="#">
+                <img src="svg/appstore.svg" class="ml-1" alt="" onload="SVGInject(this)">
+            </a>
+
+            <a href="#">
+                <img src="svg/playstore.svg" class="ml-1" alt="" onload="SVGInject(this)">
+            </a>
+            </div>
+        </div>
+
+        <div class="flex-item-2 div-card flex-center py-9 border">
+            <img src="svg/icon-card.svg" class="icon-card-hero" alt="" onload="SVGInject(this)">
+            <img src="svg/icon-mobile.svg" class="icon-card-hero" alt="" onload="SVGInject(this)">
+            <img src="svg/icon-contactless.svg" class="icon-card-hero" alt="" onload="SVGInject(this)">
+            <div class="card"></div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
