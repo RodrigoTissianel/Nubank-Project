@@ -177,3 +177,74 @@ align-items: flex-start;
         height: auto;
     }
 }
+
+// ============ SECTION PEOPLE ============ //
+
+.list{
+    list-style: none;
+
+    li{
+        margin-bottom: 12px 
+    }
+
+    a{
+        color: $secondary-light;
+    }
+}
+
+.list-item{
+    list-style: none;
+    position: relative;
+    padding: 8px 8px 8px 72px;
+    
+    &::after{
+        content: '';
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        top: -3px;
+        left: 0;
+    }
+}
+
+// ============ SECTION BEST ============ //
+
+.best{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white-normal;
+    border-radius: 50px;
+    position: relative;
+
+    &::after{
+        content: '';
+        width: 124px;
+        height: 32px;
+        background-image: url('../svg/entail.svg');
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    @include responsive(s){
+        lex-direction: column;
+    }
+}
+
+.best-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px;
+    margin: 8px 0;
+
+    @include responsive(s){
+        justify-content: center;
+        align-items: center;
+    }
+}

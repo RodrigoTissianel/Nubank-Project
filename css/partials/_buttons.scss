@@ -9,9 +9,6 @@ a{
     }
 }
 
-
-
-
 .btn{
     background: linear-gradient(220.94deg, $secondary-normal 14.43%, $primary-normal 85.28%);
     border-radius: 16px;
@@ -30,5 +27,38 @@ a{
          0px 5.125px 5.125px rgba(169, 80, 196, 0.0847066),
          0px 2.12866px 2.12866px rgba(169, 80, 196, 0.065),
          0px 0.769896px 0.769896px rgba(169, 80, 196, 0.0452935);
+    }
+}
+
+.link{
+    display: inline-block;
+    color: $primary-normal;
+    background-image: url('../svg/icon-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    padding: 16px 16px 16px 40px;
+    font-size: 18px;
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 75%;
+        left: 25%;
+        width: 0%;
+        height: 2px;
+        background-color: $secondary-light;
+        transition: .5s ease;
+    }
+
+    &:hover{
+        background-position: 16px center;
+        padding-left: 64px;
+        opacity: .8;
+
+        &::after{
+            width: 100%;
+            background-color: $secondary-light;
+        }
     }
 }

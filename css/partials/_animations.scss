@@ -80,10 +80,266 @@ $card-height: 0.64 * $card-width;
     width: $card-width;
     height: $card-height;
     border-radius: 12px;
-    background-color: red;
     transform-origin: center center;
     z-index: -1;
+    background-size: cover;
     transform-style: preserve-3d;
-    
+    animation: card-flip 12s linear infinite alternate,
+    card-background 12s linear infinite alternate;
 }
 
+@keyframes card-flip{
+    0%{
+        transform: rotateX(-10deg) rotateY(10deg) rotate(-15deg);
+    }
+    40%{
+        transform: rotateX(0deg) rotateY(0deg) rotate(20deg);
+    }
+    60%{
+        transform: rotateX(180deg) rotateY(20deg) rotate(0deg);
+    }
+    100%{
+        transform: rotateX(190deg) rotateY(10deg) rotate(15deg);
+    }
+}
+
+@keyframes card-background{
+    0%,50%{
+        background-image: url("../svg/nubank.svg");
+    }
+    51%,100%{
+        background-image: url("../svg/nubank-verse.svg");
+    }
+}
+
+.icon-card-hero{
+    position: absolute;
+    top: 0;
+    left: -30px;
+    z-index: 200;
+    animation: icon-move 5s ease .5s infinite alternate;
+}
+.icon-contactless-hero{
+    position: absolute;
+    top: 350px;
+    left: 30px;
+    z-index: 200;
+
+    @include responsive(s){
+        top: 350px;
+        left: 120px;
+    }
+    animation: icon-move 5s ease infinite 1s alternate;
+}
+
+.icon-mobile-hero{
+    position: absolute;
+    top: 150px;
+    left: -250px;
+    z-index: 200;
+    @include responsive(s){
+        top: 350px;
+        left: -150px;
+    }
+    animation: icon-move 5s ease infinite 1.5s alternate;
+}
+
+@keyframes icon-move{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(10px, -40px,0);
+    }
+}
+
+// ============ BACKGROUND HERO ANIMATION ============ //
+.bg-home-blur1{
+    transform: translate3d(0,-100px,0);
+}
+
+.bg-home-blur2{
+    transform: translate3d(0,-150px,0);
+}
+
+.bg-home-rect1{
+    animation: bg-home-rect 3s infinite alternate;
+}
+
+.bg-home-rect2{
+    animation: bg-home-rect 3s ease infinite .5s alternate;
+}
+
+.bg-home-rect3{
+    animation: bg-home-rect 3s ease infinite 1s alternate;
+}
+
+.bg-home-rect4{
+    animation: bg-home-rect 3s ease infinite 1.5s alternate;
+}
+
+@keyframes bg-home-rect{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(0,30px,0);
+    }
+}
+
+.bg-home-letter-n{
+    animation: bg-home-letter 10s ease infinite alternate;
+}
+.bg-home-letter-u{
+    animation: bg-home-letter 10s ease infinite alternate;
+}
+
+@keyframes bg-home-letter{
+    0%{
+        opacity: 0;
+        stroke-dasharray: 500px 100px;
+    }
+    40%, 100%{
+        opacity: 1;
+        stroke-dasharray: 1000px 0px;
+    }
+
+}
+
+// ============ SECTION PEOPLE ANIMATION ============ //
+
+.people1{
+    opacity: 0;
+    animation: people 10s ease infinite;
+}
+.people2{
+    opacity: 0;
+    animation: people 10s ease 5s infinite;
+}
+.people3{
+    opacity: 0;
+    animation: people 10s ease 2s infinite;
+}
+.people4{
+    opacity: 0;
+    animation: people 10s ease 7s infinite;
+}
+.people5{
+    opacity: 0;
+    animation: people 10s ease 3s infinite;
+}
+.people6{
+    opacity: 0;
+    animation: people 10s ease 8s infinite;
+}
+
+@keyframes people{
+    0%{
+        opacity: 0;
+    }
+    20%, 50%{
+        opacity: 1;
+    }
+    70%, 100%{
+        opacity: 0;
+    }
+}
+
+// ============ SECTION DIGITAL ACCOUNT ANIMATION ============ //
+
+.fignu2-screen1{
+    opacity: 0;
+    animation: fignu2-screen1 18s ease infinite;
+}
+@keyframes fignu2-screen1{
+    5%, 15%{
+        opacity: 1;
+    }
+    20%, 100%{
+        opacity: 0;
+    }
+}
+
+.fignu2-screen2{
+    opacity: 0;
+    animation: fignu2-screen2 18s ease infinite;
+}
+@keyframes fignu2-screen2{
+    0%, 15%{
+        opacity: 0;
+    }
+    20%, 35%{
+        opacity: 1;
+    }
+    40%, 100%{
+        opacity: 0;
+    }
+}
+
+.fignu2-screen3{
+    opacity: 0;
+    animation: fignu2-screen3 18s ease infinite;
+}
+@keyframes fignu2-screen3{
+    0%, 35%{
+        opacity: 0;
+    }
+    40%, 55%{
+        opacity: 1;
+    }
+    60%, 100%{
+        opacity: 0;
+    } 
+}
+
+.fignu2-screen4{
+    opacity: 0;
+    animation: fignu2-screen4 18s ease infinite;
+}
+@keyframes fignu2-screen4{
+    0%, 55%{
+        opacity: 0;
+    }
+    60%, 75%{
+        opacity: 1;
+    }
+    80%, 100%{
+        opacity: 0;
+    } 
+}
+
+.fignu2-screen5{
+    opacity: 0;
+    animation: fignu2-screen5 18s ease infinite;
+}
+@keyframes fignu2-screen5{
+    0%, 75%{
+        opacity: 0;
+    }
+    80%, 95%{
+        opacity: 1;
+    } 
+   100%{
+        opacity: 0;
+    } 
+}
+
+
+.fignu2-icon1{
+    animation: fignu2-icon 3s ease infinite .5s alternate;
+}
+.fignu2-icon3{
+    animation: fignu2-icon 3s ease infinite 1s alternate;
+}
+.fignu2-icon5{
+    animation: fignu2-icon 3s ease infinite 1.5s alternate;
+}
+
+@keyframes fignu2-icon{
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(-10px, 40px, 0);
+    }
+}
