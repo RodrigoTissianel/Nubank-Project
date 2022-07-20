@@ -70,6 +70,39 @@
     }
 }
 
+.bg-icon-card{
+    &::after{
+        background-image: url("../svg/icon-card.svg");
+        background-size: cover;
+        cursor: pointer;
+        transition: .5s ease;
+        filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+    }
+    
+    &:hover{
+        &::after{
+            transform: scale(1.05);
+        }
+    }
+}
+
+.bg-icon-contactless{
+    &::after{
+        background-image: url("../svg/icon-contactless.svg");
+        background-size: cover;
+        cursor: pointer;
+        transition: .5s ease;
+        filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
+    }
+    
+    &:hover{
+        &::after{
+            transform: scale(1.05);
+        }
+    }
+}
+
+
 .icon{
     filter: drop-shadow(0px 16px 24px rgba(169, 80, 196, 0.25));
     transition: .5s ease;
