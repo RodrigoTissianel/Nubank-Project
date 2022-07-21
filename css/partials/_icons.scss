@@ -112,3 +112,23 @@
         transform: scale(1.05);
     }
 }
+
+.icons-footer{
+    cursor: pointer;
+
+    svg{
+        max-width: 48px;
+        padding: 8px;
+
+        path{
+            stroke: $white-light;
+            transition: .5s ease;
+        }
+
+        &:hover{
+            path{
+                stroke: $secondary-light;
+            }
+        }
+    }
+}
